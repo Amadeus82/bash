@@ -118,3 +118,8 @@ function dpa {
   docker image prune -af
   docker builder prune -af
 }
+
+function jb-purge {
+    echo "purge outputs in all jupyter files within the folder $1 and all its subfolders..."
+    find $1 -name "*.ipynb" | xargs jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace 
+}
