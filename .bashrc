@@ -3,6 +3,7 @@ alias gs='git status'
 alias gl='git log --pretty=one'
 alias ga='git add -A'
 alias gc='git commit -m "$@"'
+alias gr='git commit -m "$1: intended for rebasing"'
 alias gp='git push'
 
 # conda aliases
